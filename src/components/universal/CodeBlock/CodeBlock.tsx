@@ -1,6 +1,9 @@
 /* eslint-disable react/no-array-index-key */
 
-import Highlight, { Language, defaultProps } from 'prism-react-renderer'
+import Highlight, {
+  Language,
+  defaultProps as prismProps,
+} from 'prism-react-renderer'
 
 import { radicalTheme } from './radical-prism-theme'
 
@@ -19,7 +22,7 @@ export function CodeBlock({
 
   return (
     <Highlight
-      {...defaultProps}
+      {...prismProps}
       code={children}
       language={language}
       theme={radicalTheme}
