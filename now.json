@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "build": {
+    "env": {
+      "CI": "true",
+      "CYPRESS_INSTALL_BINARY": "0"
+    }
+  },
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "maxage=31536000" },
+      "dest": "/static/$1"
+    },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}

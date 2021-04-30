@@ -1,0 +1,15 @@
+# Ignore Me!
+# -------------------------------------
+
+# Dependencies
+node_modules
+
+# Build output
+public
+storybook-static
+
+# Test output
+.nyc_output
+coverage
+coverage_cypress
+coverage_jest

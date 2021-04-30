@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "github>crystal-ball/renovate-base:project"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "@opentelemetry/api"
+      ],
+      "allowedVersions": "<=0.18.1"
+    },
+    {
+      "matchPackageNames": [
+        "react-refresh"
+      ],
+      "allowedVersions": "<=0.9.0"
+    }
+  ]
+}

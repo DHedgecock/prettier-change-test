@@ -1,0 +1,10 @@
+version: '2'
+# Ref: https://docs.codeclimate.com/docs/advanced-configuration#section-default-check-configurations
+checks:
+  # Allow 125 line component functions
+  method-lines:
+    config:
+      threshold: 125
+exclude_patterns:
+  - 'cypress/'
+  - '**/*.spec.js'

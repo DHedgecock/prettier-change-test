@@ -1,0 +1,19 @@
+# Ignore Me!
+# -------------------------------------
+
+# NPM dependencies
+node_modules/
+
+# Build output
+public
+
+# Test output
+.nyc_output
+coverage_cypress
+coverage_jest
+
+# Editor configs
+.vscode/
+
+# Compose architecture
+docker-compose*.yml

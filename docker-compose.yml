@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  application:
+    build:
+      context: .
+    ports:
+      - '5000:5000'
+
+  cypress:
+    image: cypress/included:5.6.0
+    working_dir: /e2e
+    # See https://github.com/cypress-io/cypress/issues/350
+    ipc: host
+    environment:
+      - CYPRESS_baseUrl=http://application:5000
+      ## This enables colors in the output
+      - TERM=xterm
+    depends_on:
+      - application
+    volumes:
+      - .:/e2e
