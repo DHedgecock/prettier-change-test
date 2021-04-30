@@ -6,13 +6,7 @@ import { Link } from '../Link/Link'
 
 export function Header(): JSX.Element {
   return (
-    <Flex
-      as='nav'
-      justify='end'
-      backgroundColor='overlay'
-      borderColor='100'
-      borderBottom
-    >
+    <Flex as='nav' justify='end' backgroundColor='overlay' borderColor='100'>
       <Block p='md'>
         <Link data-testid='nav-link' to={routeDetails.home.path}>
           Overview
