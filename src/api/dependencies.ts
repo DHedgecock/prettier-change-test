@@ -19,7 +19,9 @@ const decorateDependencies = (
   return decoratedDependencies
 }
 
-export const fetchDependencySize = async (id: string): Promise<null | number> => {
+export const fetchDependencySize = async (
+  id: string,
+): Promise<null | number> => {
   try {
     const res = await fetch(`https://bundlephobia.com/api/size?package=${id}`)
     const json = await res.json()
@@ -30,7 +32,10 @@ export const fetchDependencySize = async (id: string): Promise<null | number> =>
   }
 }
 
-export const fetchDependencies = async (): Promise<null | Record<string, Dependency>> => {
+export const fetchDependencies = async (): Promise<null | Record<
+  string,
+  Dependency
+>> => {
   try {
     const res = await fetch('/static/json/package.json')
     const json = await res.json()
@@ -39,7 +44,9 @@ export const fetchDependencies = async (): Promise<null | Record<string, Depende
 
     return {
       ...decorateDependencies(json.dependencies, { type: 'dependencies' }),
-      ...decorateDependencies(json.devDependencies, { type: 'devDependencies' }),
+      ...decorateDependencies(json.devDependencies, {
+        type: 'devDependencies',
+      }),
     }
   } catch (err) {
     logger('Failed to fetch dependencies')

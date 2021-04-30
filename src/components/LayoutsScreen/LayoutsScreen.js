@@ -18,8 +18,8 @@ export default function LayoutsScreen() {
           <li>Use Grid to setup application and screen layouts</li>
           <li>Use Flexbox to align and position items in layout sections</li>
           <li>
-            Prefer margin top and margin left for setting spacing. This makes it easy to
-            use a sibling selector to apply rules to lists.
+            Prefer margin top and margin left for setting spacing. This makes it
+            easy to use a sibling selector to apply rules to lists.
           </li>
         </ol>
       </Flex>

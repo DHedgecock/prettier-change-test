@@ -4,6 +4,10 @@
  */
 
 /** Iterable set of dependencies filters */
-export const DEPENDENCIES_FILTERS = ['all', 'dependencies', 'devDependencies'] as const
+export const DEPENDENCIES_FILTERS = [
+  'all',
+  'dependencies',
+  'devDependencies',
+] as const
 
 export type DependenciesFilter = typeof DEPENDENCIES_FILTERS[number]

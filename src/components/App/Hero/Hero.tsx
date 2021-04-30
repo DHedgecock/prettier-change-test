@@ -17,7 +17,10 @@ export function Hero({ title }: HeroProps): JSX.Element {
           {title}
         </Text>
 
-        <Link data-testid='github-anchor' href='https://github.com/crystal-ball'>
+        <Link
+          data-testid='github-anchor'
+          href='https://github.com/crystal-ball'
+        >
           <Github className={classes.icon} />
         </Link>
       </div>

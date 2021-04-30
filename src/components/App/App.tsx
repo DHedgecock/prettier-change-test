@@ -15,7 +15,8 @@ const routeConfigs = [
   {
     route: routeDetails.home.path,
     component: lazy(
-      () => import(/* webpackChunkName: "HomeScreen" */ '../HomeScreen/HomeScreen'),
+      () =>
+        import(/* webpackChunkName: "HomeScreen" */ '../HomeScreen/HomeScreen'),
     ),
   },
   {
@@ -26,20 +27,27 @@ const routeConfigs = [
     route: routeDetails.testing.path,
     component: lazy(
       () =>
-        import(/* webpackChunkName: "TestingScreen" */ '../TestingScreen/TestingScreen'),
+        import(
+          /* webpackChunkName: "TestingScreen" */ '../TestingScreen/TestingScreen'
+        ),
     ),
   },
   {
     route: routeDetails.react.path,
     component: lazy(
-      () => import(/* webpackChunkName: "ReactScreen" */ '../ReactScreen/ReactScreen'),
+      () =>
+        import(
+          /* webpackChunkName: "ReactScreen" */ '../ReactScreen/ReactScreen'
+        ),
     ),
   },
   {
     route: routeDetails.layouts.path,
     component: lazy(
       () =>
-        import(/* webpackChunkName: "LayoutsScreen" */ '../LayoutsScreen/LayoutsScreen'),
+        import(
+          /* webpackChunkName: "LayoutsScreen" */ '../LayoutsScreen/LayoutsScreen'
+        ),
     ),
   },
   {

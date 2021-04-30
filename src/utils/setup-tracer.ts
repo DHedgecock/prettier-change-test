@@ -8,7 +8,11 @@ import { DocumentLoadInstrumentation } from '@opentelemetry/instrumentation-docu
 import { FetchInstrumentation } from '@opentelemetry/instrumentation-fetch'
 import { registerInstrumentations } from '@opentelemetry/instrumentation'
 
-import { LS_ACCESS_TOKEN, NODE_ENV, RELEASE_VERSION } from '@/config/environment'
+import {
+  LS_ACCESS_TOKEN,
+  NODE_ENV,
+  RELEASE_VERSION,
+} from '@/config/environment'
 
 if (NODE_ENV === 'production') {
   // Create a provider for activating and tracking spans

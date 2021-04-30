@@ -14,7 +14,12 @@ type LinkProps = {
   mr?: string
 }
 
-export function Link({ children, to, searchParams, ...rest }: LinkProps): JSX.Element {
+export function Link({
+  children,
+  to,
+  searchParams,
+  ...rest
+}: LinkProps): JSX.Element {
   const dispatch = useDispatch()
 
   return (

@@ -18,7 +18,12 @@ export function CodeBlock({
   const language = className.replace(/language-/, '') as Language
 
   return (
-    <Highlight {...defaultProps} code={children} language={language} theme={radicalTheme}>
+    <Highlight
+      {...defaultProps}
+      code={children}
+      language={language}
+      theme={radicalTheme}
+    >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={{ ...style, padding: '20px' }}>
           {tokens.map((line, i) => (

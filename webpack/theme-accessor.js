@@ -32,7 +32,8 @@ function castToSass(jsValue) {
     for (var i = 0; i < jsValue.length; i++) {
       list.setValue(i, castToSass(jsValue[i]))
     }
-    var isComma = typeof jsValue.separator === 'undefined' ? true : jsValue.separator
+    var isComma =
+      typeof jsValue.separator === 'undefined' ? true : jsValue.separator
     list.setSeparator(isComma)
     return list
   } else if (jsValue && jsValue.constructor.name.indexOf('Sass') === 0) {
@@ -66,7 +67,10 @@ function convertDimension(str) {
   )
 
   if (!dimensionsMatch) return castToSass(str)
-  return new SassDimension(parseFloat(dimensionsMatch[1], 10), dimensionsMatch[2])
+  return new SassDimension(
+    parseFloat(dimensionsMatch[1], 10),
+    dimensionsMatch[2],
+  )
 }
 
 module.exports.themeAccessor = function (rawPath) {

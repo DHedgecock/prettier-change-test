@@ -6,7 +6,10 @@ import { getSearchParams } from 'dux-routing'
 
 import { fetchDependencySize } from '@/api/dependencies'
 import { Footer, Header, Link } from '@/components/universal'
-import { selectDependenciesById, selectSelectedDependencyId } from '@/dux/dependencies'
+import {
+  selectDependenciesById,
+  selectSelectedDependencyId,
+} from '@/dux/dependencies'
 import { Dependency } from '@/entities/dependency'
 import { DependenciesFilter } from '@/entities/dependencies-filter'
 import Bundlephobia from '@/media/bundlephobia.svg'
@@ -31,7 +34,9 @@ const integrations = [
 export default function StackScreen(): JSX.Element {
   const dependencies = useSelector(selectDependenciesById)
   const selectedDependencyId = useSelector(selectSelectedDependencyId)
-  const searchParams: { filter?: DependenciesFilter } = useSelector(getSearchParams)
+  const searchParams: { filter?: DependenciesFilter } = useSelector(
+    getSearchParams,
+  )
 
   const [searchValue, setSearchValue] = useState('')
   const [dependencySize, setDependencySize] = useState<number>(null)

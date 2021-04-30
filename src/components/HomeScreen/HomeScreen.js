@@ -14,7 +14,11 @@ export default function HomeScreen() {
         <Text variant='heading-1' align='center' mt='lg'>
           Prototype application
           <br /> for
-          <span className='d-inline-block px-xs' aria-label='crystal ball' role='img'>
+          <span
+            className='d-inline-block px-xs'
+            aria-label='crystal ball'
+            role='img'
+          >
             🔮
           </span>
           projects
@@ -55,11 +59,14 @@ export default function HomeScreen() {
               Automatic script injection with <code>html-webpack-plugin</code>
             </li>
             <li>
-              Friendly webpack errors with <code>friendly-errors-webpack-plugin</code>
+              Friendly webpack errors with{' '}
+              <code>friendly-errors-webpack-plugin</code>
             </li>
             <li>Dev server with hot reloading</li>
             <li>Progress indicators</li>
-            <li>Production optimizations including uglify and module concatenation</li>
+            <li>
+              Production optimizations including uglify and module concatenation
+            </li>
             <li>Output directory cleaning</li>
             <li>
               Injected <code>PUBLIC_PATH</code> for routing
